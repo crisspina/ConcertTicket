@@ -2,50 +2,26 @@
 package Customers;
 
 import Ticket.Ticket;
+import java.util.Objects;
 
-public class Customer {
-    private String cusId;
-    private String fistname;
-    private String lastName;
+public class Customer extends Person {
+    private long cusId;
     private String email;
     private Ticket ticket;
-    public Customer(String fistname, String lastName, String email) {
-        this.fistname = fistname;
-        this.lastName = lastName;
+
+    public Customer(String fistName, String lastName, long idNumber, String email) {
+        super(fistName, lastName, idNumber);
+        this.cusId = idNumber;
         this.email = email;
-       
+        this.ticket = ticket;
     }
 
-    public String getCusId() {
+    public long getCusId() {
         return cusId;
-    }
-
-    public void setCusId(String cusId) {
-        this.cusId = cusId;
-    }
-
-    public String getFistname() {
-        return fistname;
-    }
-
-    public void setFistname(String fistname) {
-        this.fistname = fistname;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
     }
 
     public String getEmail() {
         return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public Ticket getTicket() {
@@ -54,6 +30,13 @@ public class Customer {
 
     public void setTicket(Ticket ticket) {
         this.ticket = ticket;
+    }
+
+//equalมั้ย    
+    @Override
+    public String toString() {
+        return "Customer{" +"Customer name"+super.getFistName()+" "+super.getLastName()
+                + "cusId=" + cusId + ", email=" + email + ", ticket=" + ticket + '}';
     }
     
 }

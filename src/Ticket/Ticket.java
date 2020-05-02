@@ -4,8 +4,9 @@ package Ticket;
 public class Ticket {
     private String meetingName;
     private String ticketId;
+    private int ticketPrice;
 
-    public Ticket() {
+    public Ticket() {        
     }
 
     public String getMeetingName() {
@@ -23,6 +24,19 @@ public class Ticket {
 
     public void setTicketId(String ticketId) {
         this.ticketId = ticketId;
+    }
+
+    public int getTicketPrice() {
+        return ticketPrice;
+    }
+
+    public void setTicketPrice(int ticketPrice) {
+        this.ticketPrice = ticketPrice;
+    }
+
+    @Override
+    public String toString() {
+        return "Ticket{" + "meetingName=" + meetingName + ", ticketId=" + ticketId + ", ticketPrice=" + ticketPrice + '}';
     }
    
 }

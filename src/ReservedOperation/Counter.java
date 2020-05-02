@@ -2,11 +2,7 @@
 package ReservedOperation;
 
 
-public class Counter {
+public class Counter implements Payment,Reserved{
 
  
-    public static void main(String[] args) {
-     
-    }
-    
 }

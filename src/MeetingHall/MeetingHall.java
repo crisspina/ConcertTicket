@@ -1,14 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package MeetingHall;
 
-/**
- *
- * @author User
- */
 public class MeetingHall {
-    
+
+private MeetingRoom[] meetingRoom;
+private int countRoom;
+
+    public MeetingHall() {
+        this.meetingRoom=new MeetingRoom[MeetingPolicy.MAXIMUM_PEOPLE_PER_MEETING_ROOM];
+        createMeetingId();
+    }
+
+    private void createMeetingId() {
+        for (int i = 0; i < meetingRoom.length; i++) {
+            meetingRoom[i]=new MeetingRoom("room id"+(i+1));
+        }
+    }
+       
 }
